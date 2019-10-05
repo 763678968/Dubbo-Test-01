@@ -19,7 +19,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     UserService userService;
     @Override
-    public void initOrder(String userId) {
+    public List<UserAddress> initOrder(String userId) {
 
         System.out.println("用户id：" + userId);
         // 1.查询用户的收货地址
@@ -27,5 +27,6 @@ public class OrderServiceImpl implements OrderService {
         for (UserAddress userAddress : addressList) {
             System.out.println(userAddress.getUserAddress());
         }
+        return addressList;
     }
 }
