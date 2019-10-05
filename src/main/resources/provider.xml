@@ -20,4 +20,7 @@
     <!-- 服务的实现 -->
     <bean id="userServiceImpl" class="com.example.gmall.service.impl.UserServiceImpl"/>
 
+    <!-- 连接监控中心 -->
+    <dubbo:monitor protocol="registry"/>
+
 </beans>
