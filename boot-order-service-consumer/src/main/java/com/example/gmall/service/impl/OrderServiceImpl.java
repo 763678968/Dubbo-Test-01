@@ -19,7 +19,7 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
 //    @Autowired
-    @Reference
+    @Reference(url="127.0.0.0:20880") // dubbo直连
     UserService userService;
     @Override
     public List<UserAddress> initOrder(String userId) {
